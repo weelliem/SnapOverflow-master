@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="CameraFragmentViewModel"
+            type="com.mad.snapoverflow.viewmodel.CameraFragmentViewModel"/>
+
+
+        
+    </data>
+    
+    
+    
+    
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCapture"/>
+
+
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_ctp"
+        android:onClick="@{CameraFragmentViewModel.onClickCapture()}"/>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="SignupVM"
+            type="com.mad.snapoverflow.viewmodel.SignUpViewModel"/>
+    </data>
+
+
+
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Activities.LoginActivity"
+    android:background="@color/colorWhite">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSign1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSign2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/guidelineSign1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/my_imageViewLogo"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo_stack_white"
+
+        app:layout_constraintTop_toTopOf="@id/guidelineSign1"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineSign1"
+    />
+
+    <ImageView
+    android:id="@+id/my_imageViewReg"
+    android:layout_width="170dp"
+    android:layout_height="40dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/registration_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/guidelineSign1"
+    app:layout_constraintBottom_toBottomOf="@id/guidelineSign1"
+    />
+
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressSign"
+        style="?android:attr/progressBarStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineSign2"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineSign2"
+        android:elevation="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineSign2"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineSign2"
+
+        >
+
+        <EditText
+            android:id="@+id/textEmailReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_email_hint"
+            android:inputType="textEmailAddress"
+            android:text="@={SignupVM.mEmail}"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/textPasswordReg"
+            android:hint="@string/enter_password_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="@={SignupVM.mPassword}"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/textUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/username_hint"
+            android:text="@={SignupVM.mUsername}"/>
+
+        <EditText
+            android:layout_marginTop="15dp"
+            android:id="@+id/textDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="@string/date_of_birth"
+            android:text="@={SignupVM.mDate}"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/textUniversity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/University"
+            android:text="@={SignupVM.mUniversity}"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/textAoI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/Area_of_Intrest"
+            android:text="@={SignupVM.mAoi}"/>
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/texttLogin"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_main"
+                android:onClick="@{SignupVM.onClickLogin()}"
+                android:stateListAnimator="@null"
+                android:text="@string/button_cancel"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/buttonRegister"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_main"
+                android:onClick="@{SignupVM.onClickRegister()}"
+                android:stateListAnimator="@null"
+                android:text="@string/button_register" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+
+    </layout>
