@@ -9,9 +9,9 @@ allow students to help and interact with each other in real time
 
 ## Table of Content 
 * [Prerequisites](#prerequisites)
-* [Building APK](#building apk)
+* [Building-APK](#building-apk)
 * [Features](#features)
-* [Component Overview](#component overview)
+* [Component-Overview](#component-overview)
 * [APIs](#apis)
 * [Bugs](#bugs)
 * [Credits](#credits)
@@ -20,7 +20,7 @@ allow students to help and interact with each other in real time
 ## Prerequisites
 It is recommended to have the latest version of android studio **4.0.1** and to have updated your android gradle-plugin **4.0.1** to allow for gradle **6.1.1.** and SDK Build Tools **29.0.2 or higher**.
 
-## Building APK
+## Building-APK
 In android studio **Build > Build Bundle(s) / APK > Build APK(s)**
 
 ## Features
@@ -68,7 +68,7 @@ recycler adaptor monitors changes to firebase and does real time changes to the 
 best point about the firebase adaptor is the automatic updating and querying that is handled by
 firebase which leads to less coding for you 
 
-## Component Overview
+## Component-Overview
 **Model View View-Model**
 
 The model view view-Model (MVVM) architectural pattern is somewhat used within this application
