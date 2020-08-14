@@ -129,10 +129,10 @@ variables in your application.
 This basically allows the use of recycle and card views within your application.
 
 ## Bugs
-* 12/08/2020 - due to adroid studio upgrade their android versions the swipe navagation is alot more sensitive therefore make sure to use the edge of the screen while slow swiping
+* 12/08/2020 - due to adroid studio upgrading their android versions the swipe navagation is alot more sensitive therefore make sure to use the edge of the screen while slow swiping
 
 ## Credits 
-Thanks to Ryan Heist the subject co-ordinator for insignt in the development process
+Thanks to Ryan Heist the UTS subject co-ordinator for insignt in the development process
 
 © William Hong 2020
 
